@@ -1,0 +1,5 @@
+p, r.sub.role.name == "Reviewer", ReadOwn
+p, r.sub.role.name == "Reviewer", Write
+p, r.sub.role.name == "Owner", ReadOwn
+p, r.sub.role.name == "Owner" && r.sub.role.owned_establishment != r.obj, Write
+p, r.sub.role.name == "Owner" && r.sub.role.owned_establishment == r.obj, Read
